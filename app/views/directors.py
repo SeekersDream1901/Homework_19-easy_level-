@@ -1,8 +1,8 @@
 from flask import request
 from flask_restx import Resource, Namespace
 
-from easy_level.app.database import db
-from easy_level.app.models import DirectorSchema, Director
+from app.database import db
+from app.models import DirectorSchema, Director
 
 directors_ns = Namespace('directors')
 

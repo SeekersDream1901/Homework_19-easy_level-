@@ -1,8 +1,8 @@
 from flask import request
 from flask_restx import Resource, Namespace
 
-from easy_level.app.database import db
-from easy_level.app.models import GenreSchema, Genre
+from app.database import db
+from app.models import GenreSchema, Genre
 
 genres_ns = Namespace('genres')
 

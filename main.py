@@ -1,11 +1,12 @@
 from flask import Flask
 from flask_restx import Api
 
-from easy_level.app.config import Config
-from easy_level.app.database import db
-from easy_level.app.views.directors import directors_ns
-from easy_level.app.views.genres import genres_ns
-from easy_level.app.views.movies import movies_ns
+from app.config import Config
+from app.database import db
+from app.views.directors import directors_ns
+from app.views.genres import genres_ns
+from app.views.movies import movies_ns
+from app.views.users import users_ns
 
 
 def create_app(config: Config) -> Flask:
@@ -22,6 +23,7 @@ def configure_app(application: Flask):
     api.add_namespace(movies_ns)
     api.add_namespace(directors_ns)
     api.add_namespace(genres_ns)
+    api.add_namespace(users_ns)
 
 
 if __name__ == '__main__':
